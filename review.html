@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CarTV - Screen Share | Foreground services review</title>
+<style>body{max-width:900px;margin:40px auto;padding:0 20px;background:#101113;color:#eee;font:17px/1.6 system-ui}a{color:#a9c7ff}video{display:block;max-width:100%;height:72vh;background:#000;margin:24px auto}li{margin:8px 0}</style>
+<h1>CarTV - Screen Share</h1><h2>Foreground services review</h2>
+<p>Recorded on an isolated Android emulator using a synthetic local sample video. This demonstrates the phone app, not Android Auto vehicle compatibility. Advertising and purchases are disabled in the QA recording.</p>
+<video controls preload="metadata" playsinline src="foreground-services-review.mp4"></video>
+<ol><li>0:06 - Start broadcast in the app; Android screen-sharing consent.</li>
+<li>0:12 - Active broadcast with an ongoing notification and a stop action.</li>
+<li>0:18 - Broadcast stopped by the user; the temporary receiver link is revoked.</li>
+<li>0:21 - User selects local media; video playback and media-session notification.</li>
+<li>0:32 - User opens picture-in-picture; playback continues outside the app.</li></ol>
+<p>Screen capture begins only after Android consent. Media playback starts only when the user selects media. These services keep those visible, user-initiated tasks running and provide stop/playback controls. Interrupting them would unexpectedly stop the ongoing broadcast or playback.</p>
+<p><a href="foreground-services-review.mp4">Download the recorded MP4</a> &middot; <a href="./">Privacy and support</a></p></html>
